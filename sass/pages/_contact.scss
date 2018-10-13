@@ -15,7 +15,7 @@
     }
 
     &__social {
-        width: 134rem;
+        width: 122rem;
         margin: 15rem auto 0 auto;
         @include clearfix;
 
@@ -26,7 +26,7 @@
 
     &__social-icon {
         height: auto;
-        width: 14rem;
+        width: 12rem;
         float: left;
         @include clearfix;
         transition: transform .2s ease;

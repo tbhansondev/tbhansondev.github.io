@@ -10,7 +10,7 @@ var codeList = (function() {
         listItem: '\'%text%\',',
         listItemEnd: '\'%text%\'',
         listSectionEnd: '<li class="technology__technology technology__technology--spacer"><div class="number-prefix">%count%</div><span class="red">]</span>;</li>',
-        cursor: '<span class="js--cursor js--cursor--hide white">&#124;</span>'
+        cursor: '<span class="js--cursor js--cursor--hide offset-up white">&#124;</span>'
     };
     var headingClass = 'technology__technology--heading';
     var count = 1;

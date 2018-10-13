@@ -32,6 +32,12 @@
             color: $color-white;
         }
 
+        .offset-up {
+            position: relative;
+            display: inline-block;
+            transform: translate(-.2rem, -.2rem);
+        }
+
         &.highlight-row {
             background: linear-gradient(to bottom, $color-bg--dark-highlight 50%, transparent 50%);
         }

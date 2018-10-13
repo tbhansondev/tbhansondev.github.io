@@ -1,16 +1,18 @@
-@import "variables";
-@import "mixins";
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-@import "base";
-@import "typography";
-@import "sections";
+@import "base/base";
+@import "base/typography";
 
-@import "loader";
-@import "frame";
-@import "header";
-@import "aboutme";
-@import "card";
-@import "technology";
-@import "projects";
-@import "contact";
-@import "footer"
+@import "layout/frame";
+@import "layout/sections";
+@import "layout/footer";
+
+@import "pages/header";
+@import "pages/aboutme";
+@import "pages/technology";
+@import "pages/projects";
+@import "pages/contact";
+
+@import "components/loader";
+@import "components/card";
