@@ -1,0 +1,45 @@
+.footer {
+    height: 29vh;
+    width: 100%;
+    background-color: $color-bg--dark;
+    display: block;
+    position: relative;
+
+    &__email {
+        position: absolute;
+        bottom: 40%;
+        left: 10rem;
+
+        &:link,
+        &:visited {
+            color: $color-white;
+            font-size: 7rem;
+            border-bottom: .5rem solid $color-blue--light;
+            padding-bottom: .5rem;
+            transition: padding-bottom .2s ease;
+        }
+    }
+    
+    &__blurb {
+        position: absolute;
+        bottom: 40%;
+        right: 10rem;
+        color: $color-grey--light;
+        font-size: 2.5rem;
+        letter-spacing: .2rem;
+        line-height: 130%;
+        text-align: center;
+    }
+    
+    &__name {
+        letter-spacing: .5rem;
+    }
+
+    &__location {
+        color: $color-red--light;
+    }
+
+    &__year {
+        color: $color-blue--light;
+    }
+}

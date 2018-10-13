@@ -1,0 +1,44 @@
+// GLOBAL RESET
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;               // 10px
+  font-family: $font-body;
+  color: $color-grey--dark;
+  
+  @include respond(win-tab) {
+    font-size: 56.25%;          // 9px    
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;             // 8px
+  }    
+
+  @include respond(big-desk) {
+    font-size: 75%;             // 12px
+  }
+  
+};
+
+button {
+  display: block;
+  position: relative;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  text-shadow: inherit;
+  cursor: pointer;
+  outline: inherit;
+  z-index: 10;
+}

@@ -1,0 +1,69 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-header;
+    font-weight: 500;
+}
+
+h1 {
+    color: $color-offwhite;
+    font-size: 8.5rem;
+    display: block;
+}
+
+h2 {
+    display: block;
+    font-size: 8.5rem;
+    letter-spacing: .5rem;
+    margin: 7rem auto;
+    text-align: center;
+
+    @include respond(win-tab) {
+        margin-bottom: 3rem;
+    }
+}
+
+h3 {
+    display: block;
+    font-size: 7rem;
+    letter-spacing: .2rem;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    
+    & span {
+        color: $color-white;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.paragraph {
+    font-size: 2rem;        
+    line-height: 120%;
+    text-align: justify;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.paragraph__link {
+    color: $color-blue--light;
+    
+    &:link,
+    &:visited {
+        border-bottom: .1rem solid rgba($color-blue--light, 0);
+        transition: .1s all ease;
+    }
+
+    &:hover,
+    &:active {
+        padding-bottom: .2rem;
+        border-bottom: .1rem solid rgba($color-blue--light, 1);
+    }
+}

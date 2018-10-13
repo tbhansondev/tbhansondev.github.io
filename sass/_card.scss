@@ -1,0 +1,579 @@
+// Hide cards when not active -----------------
+.section > .about-me > .cards {
+    visibility: hidden;
+}
+
+.section.active > .about-me > .cards {
+    visibility: visible;
+}
+// --------------------------------------------
+
+.cards {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: transparent;
+    -webkit-transform-style: preserve-3d;
+    transform: translate(-58%, 44%) rotateX(70deg) rotateY(0deg) rotateZ(35deg);
+    width: 259rem;
+
+    &__row {
+        width: 100%;
+    }
+}
+
+.card {
+    float: left;
+    @include clearfix;
+    background-color: $color-grey--lightest;
+    height: 20rem;
+    width: 35rem;
+    margin: 1rem;
+    box-shadow: 0;
+    backface-visibility: hidden;
+    transform-origin: -20% 15%;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        padding: 2rem;
+        position: relative;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: $color-grey--lighter;
+    }
+
+    &::before {
+        width: 100%;
+        height: .8rem;
+        bottom: 0;
+        left: 0;
+        transform: skewX(35deg) translateX(0) translateY(.8rem);
+        transform-origin: 0 100%;
+    }
+
+    &::after {
+        height: 100%;
+        width: .6rem;
+        top: 0;
+        right: 0;
+        transform: skewY(55deg) translateX(.6rem) translateY(0);
+        transform-origin: 100% 0;
+    }
+
+    &:hover {
+        cursor: default;
+    }
+
+    &.card--active {        
+        transition: transform .4s ease,
+                    box-shadow .4s ease;
+
+        &::before,
+        &::after {
+            transition: transform .4s ease,
+                        height .4s ease,
+                        width .4s ease;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) translateZ(4rem);
+            box-shadow: 4rem 4rem 2rem rgba(0, 0, 0, .4);
+
+            
+            &::before {
+                transform: skewX(40deg) translateX(0) translateY(.8rem);
+            }
+
+            &::after {
+                transform: skewY(50deg) translateX(.6rem) translateY(0);
+            }
+            
+        }
+
+        &:focus {
+            transform: rotateX(-60deg) rotateY(40deg) rotateZ(-17deg) translateX(-21rem) translateY(-25rem) translateZ(50rem) scale(1.4);
+            box-shadow: 0px 4rem 4rem rgba(0, 0, 0, .4);
+            
+            &::before {
+                transform: skewX(0deg) translateX(0px) translateY(0px);
+                height: 0px;
+            }
+
+            &::after {
+                transform: skewY(0deg) translateX(0px) translateY(0px);
+                width: 0px;
+            }
+        }
+    }
+}
+
+.card {
+
+    & > * {
+        text-align: left;
+        color: $color-bg--dark-highlight;
+    }
+
+    &--school {
+        background-color: $color-blue--cvhs;
+        @include colorEdges($color-gold--cvhs);
+
+        .card__content {
+            @include shine($color-blue--light--cvhs);
+        }
+
+        & > * {
+            font-family: $font-arial;   
+        }
+
+        &__header {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            width: 100%;
+            background-color: $color-blue--light--cvhs;
+            padding: .5rem 1rem;
+        }
+
+        &__header-image {
+            width: 4.5rem;
+            height: auto;
+            position: absolute;
+            top: -.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__header-text {
+            color: $color-blue--cvhs;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            @include clearfix;
+
+            & > .left {
+                float: left;
+            }
+
+            & > .right {
+                float: right;
+                margin-right: 1.3rem;
+            }
+        }
+
+        &__information {
+            color: $color-blue--light--cvhs;
+            text-align: center;
+            display: block;
+            margin-top: 4.5rem;
+        }
+
+        &__name {
+            color: $color-gold--cvhs;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: .7rem;
+        }
+
+        &__dates {
+            color: white;
+            font-size: 1.5rem;
+            margin: .2rem 0;
+        }
+
+        &__grades {
+            margin-top: .7rem;
+        }
+
+        &__grade {
+            display: inline-block;
+            color: $color-gold--cvhs;
+            font-size: 2rem;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        &__count {
+            color: white;
+            font-size: 1rem;
+            margin-right: .2rem;
+            letter-spacing: .1rem;
+        }
+
+        &__contact {
+            margin-top: 1rem;
+            text-align: center;
+
+            & > li {
+                color: $color-blue--light--cvhs;
+                display: inline-block;
+                font-size: .74rem;
+            }
+        }
+
+        &__crown {
+            width: 2.5rem;
+            height: auto;
+            fill: $color-gold--cvhs;
+            margin-left: -.5rem;
+            margin-right: -.5rem;
+            transform: translateY(.3rem);
+        }
+    }
+
+    &--college {
+        background-color: $color-gold--light--cvhs;
+        background: url('../img/textures/embossed-paper.png'), linear-gradient($color-gold--light--cvhs,$color-gold--light--cvhs);
+        @include colorEdges($color-blue--light--cvhs);
+        @include clearfix;
+
+        & > * {
+            font-family: $font-arial;   
+            color: $color-blue--cvhs;
+        }
+
+        &__bg {
+            opacity: .1;
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            width: 70%;
+            height: auto;
+            transform: rotate(-25deg);
+            fill: $color-gold--mid--cvhs;
+            filter: drop-shadow(-1px 1px 0 black)
+                    drop-shadow(2px -2px 0 white);
+            z-index: -1;
+        }
+
+        &__information {
+            float: right;
+            width: 35%;
+            @include clearfix;
+            & > * {
+                text-align: center;
+            }
+        }
+
+        &__name {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+
+            span {
+                display: block;
+
+                &:nth-of-type(1) {
+                    letter-spacing: .7rem;
+                }
+
+                &:nth-of-type(2) {
+                    letter-spacing: .8rem;
+                }
+            }
+        }
+
+        &__tagline {
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: .2rem;
+
+            &::after {
+                content: "";
+                display: block;
+                height: .1rem;
+                width: 90%;
+                margin: 1rem auto;
+                background-color: lighten($color-blue--light--cvhs, 20%);
+            }
+        }
+
+        &__subjects-container {
+            @include clearfix;
+            &::after {
+                content: "";
+                display: block;
+                height: .1rem;
+                width: 90%;
+                margin: 2rem auto 1rem auto;
+                background-color: lighten($color-blue--light--cvhs, 20%);
+            }
+        }
+
+        &__subjects {
+            width: 50%;
+            float: left;
+            @include clearfix;
+            line-height: 1.6rem;
+            margin-bottom: 1rem;
+
+            &--left {
+
+            }
+
+            &--right {
+                
+            }
+        }
+
+        &__subject {
+
+        }
+
+        &__contact {
+            font-size: .65rem;
+            color: $color-blue--light--cvhs;
+
+            & > li:not(:last-child) {
+                margin-bottom: .3rem;
+            }
+        }
+    }
+
+    &--university {
+        background-color: black;
+        @include colorEdges(red);
+
+        .card__content {
+            @include shine(white);
+            background-color: white;
+            border: 2rem solid $color-grey--lightest;
+            padding: 2.2rem;
+        }
+
+        &__bg {
+            position: absolute;
+            top: 2.4rem;
+            right: -5.65rem;
+            height: 11.3rem;
+            width: 11.3rem;
+            background: linear-gradient(to bottom right, red 16.666%, orange 16.666%, orange 33.333%, yellow 33.333%, yellow 50%, green 50%, green 66.666%, blue 66.666%, blue 83.333%, indigo 83.333%);
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+
+        &__laser {
+            fill: red;
+            position: absolute;
+            left: -1.5rem;
+            top: 40.5%;
+            width: 25rem;
+            height: auto;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 12%;
+                right: .5rem;
+                height: 2.5rem;
+                width: 1rem;
+                background-color: white;
+                border-left: .25rem solid black;
+                border-right: .25rem solid black;
+            }
+        }
+
+        &__name {
+            font-size: 2rem;
+            margin-top: .8rem;
+        }
+
+        &__course {
+            margin-top: .2rem;
+            font-size: 1.2rem;
+        }
+
+        &__graduation {
+            margin-top: 2.2rem;
+        }
+
+        &__logo {
+            position: absolute;
+            bottom: 1rem;
+            left: 1.9rem;
+            width: 7rem;
+            height: auto;
+            
+        }
+
+    }
+
+    &--music {
+        background-color: $color-grey--dark;
+        @include colorEdges($color-grey);
+
+        .card__content {
+            @include shine(white);
+        }
+
+        &__bg {
+            position: absolute;
+            width: 170%;
+            height: auto;
+            top: 5%;
+            left: -5%;
+            z-index: -1;
+        }
+
+        &__name {
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: .5rem;
+            z-index: 1;
+            margin-top: 5.2rem;
+            margin-bottom: 1rem;
+        }
+
+        &__instruments {
+            color: #ccc;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.6rem;
+            letter-spacing: .3rem;
+            margin-bottom: 3.5rem;
+
+            & > * {
+                display: inline-block;
+            }
+        }
+
+        &__url {
+            text-align: center;
+            color: #ccc;
+            font-size: 1.2rem;
+            letter-spacing: .2rem;
+        }
+    } 
+
+    &--BHET {
+        background-color: $color-white--bhet;
+        background: url('../img/textures/light-paper-fibers.png'), linear-gradient($color-white--bhet, $color-white--bhet);
+        @include colorEdges($color-grey--light);
+        
+        & > * {
+            font-family: $font-arial; 
+            font-weight: 100;
+        }
+
+        &__logo {
+            display: block;
+            margin: 0 0 .8rem auto;
+            height: auto;
+            width: 12rem;
+        }
+
+        &__name {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        &__job-title {
+            font-size: 1.1rem;
+            margin-bottom: .8rem;
+        }
+
+        &__address,
+        &__contact {
+            font-size: .8rem;
+            margin-bottom: .2rem;
+        }
+
+        &__url {
+            font-weight: bold;
+            font-size: .9rem;
+            margin-bottom: .8rem;
+        }   
+
+        &__BG-logo {
+            width: 6rem;
+            height: auto;
+            float: left;
+            @include clearfix;
+        }
+
+        &__BG-logo-caption {
+            font-size: .7rem;
+            margin-top: .7rem;
+            margin-left: 1.2rem;
+            float: left;
+            @include clearfix;
+        }
+    }
+
+    &--tf2 {
+        background-color: $color-orange--tf2;
+        background: url('../img/textures/exclusive-paper.png'), linear-gradient($color-orange--tf2, $color-orange--tf2);
+        @include colorEdges($color-grey--light);
+
+        &__logo {
+            fill: white;
+            position: absolute;
+            top: -5.5rem;
+            right: -8rem;
+            height: 25rem;
+            width: 25rem;
+        }
+
+        &__information {
+            color: white;
+            font-size: 1.2rem;
+            display: block;
+            height: 100%;
+
+            p:last-of-type {
+                margin-bottom: 7.5rem;
+            }
+        }
+
+        &__name {
+            font-family: 'tf2build', 'Karla', sans-serif;
+            font-size: 1.7rem;
+            margin-bottom: .3rem;
+        }
+
+        &__alias {
+            font-size: 2.5rem;
+        }
+        
+        &__alias-icon {
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+            margin-bottom: -.1rem;
+            margin-right: .5rem;
+            fill: white;
+        }
+    }
+}
+
+// SHINE ANIMATION
+.card {
+    
+    &__content::after {
+        transition: background-position .4s ease;
+    }
+
+    &:hover &__content::after {
+        background-position: 10%;
+    }
+
+    &:focus &__content::after {
+        background-position: -30%;
+    }
+}

@@ -1,0 +1,23 @@
+.about-me {
+    height: 100%;
+    width: 100%;
+
+    &__heading {
+
+    }
+
+    &__text {
+        width: $container-width;
+        margin: 3rem auto;
+
+        .large {
+            color: $color-red--light;
+            font-size: 3rem;
+            line-height: 150%;
+        }
+
+        .emphasis {
+            color: $color-red--light;
+        }
+    }
+}

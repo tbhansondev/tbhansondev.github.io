@@ -1,0 +1,37 @@
+.frame {    
+    &__section {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        background-color: white;
+
+        &--top {
+            height: $frame-width;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        &--right {
+            height: 100%;
+            width: $frame-width;
+            top: 0;
+            right: 0;
+        }
+
+        &--bottom {
+            height: $frame-width;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        &--left {
+            height: 100%;
+            width: $frame-width;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+

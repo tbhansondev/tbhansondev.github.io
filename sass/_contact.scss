@@ -1,0 +1,77 @@
+.section--contact > .section-container {
+    padding: 0;
+}
+
+.contact {
+    height: 67vh;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 2vh;
+    @include clearfix;
+
+    &__heading {
+
+    }
+
+    &__social {
+        width: 134rem;
+        margin: 15rem auto 0 auto;
+        @include clearfix;
+
+        &:hover > * {
+            transform: scale(.9);
+        }
+    }
+
+    &__social-icon {
+        height: auto;
+        width: 14rem;
+        float: left;
+        @include clearfix;
+        transition: transform .2s ease;
+        
+        &:not(:last-child) {
+            margin-right: 10rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__link {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__icon {
+        fill: $color-bg--dark;
+        height: auto;
+        width: 100%;
+
+        &--twitter {
+            fill: $color-twitter;
+        }
+
+        &--linkedin {
+            fill: $color-linkedin;
+        }
+
+        &--github {
+            fill: $color-github;
+        }
+
+        &--codepen {
+            fill: $color-codepen--dark;
+        }
+
+        &--pluralsight {
+            fill: url(#gradient-pluralsight) $color-pluralsight--orange;
+        }
+
+        &--udemy {
+            fill: $color-udemy;
+        }
+    }
+}

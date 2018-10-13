@@ -1,0 +1,35 @@
+// Hide absolute positioned element when not active -----------------
+.section > .projects > .projects__coming-soon {
+    visibility: hidden;
+}
+
+.section.active > .projects > .projects__coming-soon {
+    visibility: visible;
+}
+// ------------------------------------------------------------------
+
+.projects {
+    
+    &__heading {
+        color: $color-offwhite;
+    }
+
+    &__coming-soon {
+        display: block;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba($color-offwhite, .8);
+        width: $container-width;
+        padding: 6rem;
+    }
+
+    &__coming-soon-heading {
+
+    }
+
+    &__coming-soon-text {
+        font-size: 2.5rem;
+    }
+}

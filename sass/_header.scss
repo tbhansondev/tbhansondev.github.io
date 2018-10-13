@@ -1,0 +1,63 @@
+.header {
+    background-color: $color-bg--dark;
+
+    &__heading {
+        display: block;
+        margin-top: 37vh;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    &__social {
+        display: block;
+        position: relative;
+        background-color: $color-bg--dark-highlight;
+        padding: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__social-item {
+        display: inline-block;
+        color: $color-white;
+        font-size: 2.5rem;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    &__link {
+        border-bottom: 2px solid transparent;
+        transition: border-bottom .2s linear;
+        padding-bottom: .3rem;
+
+        &:hover {
+            border-bottom: 2px solid white;
+        }
+
+        &--twitter {
+            color: $color-twitter;
+        }
+
+        &--linkedin {
+            color: $color-linkedin;
+        }
+
+        &--github {
+            color: $color-github;
+        }
+
+        &--codepen {
+            color: $color-codepen--light;
+        }
+    }
+}
+
+.js--cursor {
+    color: $color-grey;
+
+    &--hide {
+        visibility: hidden;
+    }
+}
