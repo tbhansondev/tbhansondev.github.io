@@ -15,24 +15,56 @@
     }
 
     &__social {
-        width: 122rem;
+        width: 134rem;
         margin: 15rem auto 0 auto;
         @include clearfix;
 
+        @include respond(win-tab) {
+            width: 122rem;
+            margin-top: 19rem;
+        }
+
+        @include respond(tab-land) {
+            width: 56rem;
+            margin-top: 12rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 15rem;
+        }
+
+        @include respond(phone) {
+            width: 50rem;
+        }
+        
         &:hover > * {
             transform: scale(.9);
         }
     }
-
+    
     &__social-icon {
         height: auto;
-        width: 12rem;
+        width: 14rem;
         float: left;
         @include clearfix;
         transition: transform .2s ease;
-        
+
+        @include respond(win-tab) {
+            width: 12rem;
+        }
+
+        @include respond(phone) {
+            width: 10rem;
+        }
+
         &:not(:last-child) {
             margin-right: 10rem;
+        }
+
+        @include respond(tab-land) {
+            &:nth-child(3) {
+                margin-right: 0;
+            }
         }
 
         &:hover {

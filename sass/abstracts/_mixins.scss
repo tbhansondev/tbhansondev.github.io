@@ -17,7 +17,7 @@
     }
 
     @if $breakpoint == big-desk {
-        @media only screen and (min-width: 125em) { @content };   //2000px
+        @media only screen and (min-width: 125em) { @content };     //2000px
     }
 }
 

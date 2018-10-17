@@ -1,15 +1,36 @@
+// Hide cards when not active -----------------
+.section > .about-me > .about-me__text {
+    visibility: hidden;
+}
+
+.section.active > .about-me > .about-me__text {
+    visibility: visible;
+}
+// --------------------------------------------
+
 .about-me {
     height: 100%;
     width: 100%;
 
     &__heading {
-        margin-bottom: 3rem;
-    }
 
+    }
+    
     &__text {
         width: $container-width;
-        margin: 3rem auto;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
+        @include respond(tab-port) {
+            width: $container-width--tablet;
+        }
+
+        @include respond(phone) {
+            width: $container-width--phone;
+        }
+        
         .large {
             color: $color-red--light;
             font-size: 3rem;

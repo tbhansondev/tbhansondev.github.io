@@ -9,7 +9,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;               // 10px 62.5%
+  font-size: 62.5%;               // 10px
   font-family: $font-body;
   color: $color-grey--dark;
   
@@ -19,8 +19,12 @@ html {
 
   @include respond(tab-port) {
     font-size: 50%;             // 8px
-  }    
+  }   
 
+  @include respond(phone) {
+    //font-size: 43.75%;             // 7px
+  }    
+  
   @include respond(big-desk) {
     font-size: 75%;             // 12px
   }

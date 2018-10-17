@@ -23,6 +23,14 @@
         background-color: rgba($color-offwhite, .8);
         width: $container-width;
         padding: 6rem;
+        
+        @include respond(tab-port) {
+            width: $container-width--tablet;
+        }
+
+        @include respond(phone) {
+            width: $container-width--phone;
+        }
     }
 
     &__coming-soon-heading {

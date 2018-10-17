@@ -48,7 +48,7 @@ h2 {
   display: block;
   font-size: 8.5rem;
   letter-spacing: .5rem;
-  margin: 6rem auto;
+  margin: 7rem auto;
   text-align: center; }
   @media only screen and (max-width: 93.75em) {
     h2 {
@@ -139,6 +139,9 @@ section {
       border-bottom: 0.5rem solid #5fb3b3;
       padding-bottom: .5rem;
       transition: padding-bottom .2s ease; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__email:link, .footer__email:visited {
+          font-size: 4.5rem; } }
   .footer__blurb {
     position: absolute;
     bottom: 40%;
@@ -195,14 +198,24 @@ section {
   .js--cursor--hide {
     visibility: hidden; }
 
+.section > .about-me > .about-me__text {
+  visibility: hidden; }
+
+.section.active > .about-me > .about-me__text {
+  visibility: visible; }
+
 .about-me {
   height: 100%;
   width: 100%; }
-  .about-me__heading {
-    margin-bottom: 3rem; }
   .about-me__text {
     width: 97rem;
-    margin: 3rem auto; }
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 56.25em) {
+      .about-me__text {
+        width: 75rem; } }
     .about-me__text .large {
       color: #e66d63;
       font-size: 3rem;
@@ -210,13 +223,25 @@ section {
     .about-me__text .emphasis {
       color: #e66d63; }
 
+.section > .technology > .technology__list {
+  visibility: hidden; }
+
+.section.active > .technology > .technology__list {
+  visibility: visible; }
+
 .technology__heading {
   color: snow; }
 
 .technology__list {
   display: block;
-  margin: 6rem auto auto auto;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 97rem; }
+  @media only screen and (max-width: 56.25em) {
+    .technology__list {
+      width: 75rem; } }
   .technology__list > * {
     font-size: 2.5rem; }
 
@@ -230,10 +255,6 @@ section {
     color: #dbea7c; }
   .technology__technology .white {
     color: #fff; }
-  .technology__technology .offset-up {
-    position: relative;
-    display: inline-block;
-    transform: translate(-0.2rem, -0.2rem); }
   .technology__technology.highlight-row {
     background: linear-gradient(to bottom, #4f5b66 50%, transparent 50%); }
 
@@ -286,25 +307,37 @@ section {
     clear: both;
     display: table; }
   .contact__social {
-    width: 122rem;
+    width: 134rem;
     margin: 15rem auto 0 auto; }
     .contact__social::after {
       content: "";
       clear: both;
       display: table; }
+    @media only screen and (max-width: 93.75em) {
+      .contact__social {
+        width: 122rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__social {
+        width: 56rem; } }
     .contact__social:hover > * {
       transform: scale(0.9); }
   .contact__social-icon {
     height: auto;
-    width: 12rem;
+    width: 14rem;
     float: left;
     transition: transform .2s ease; }
     .contact__social-icon::after {
       content: "";
       clear: both;
       display: table; }
+    @media only screen and (max-width: 93.75em) {
+      .contact__social-icon {
+        width: 12rem; } }
     .contact__social-icon:not(:last-child) {
       margin-right: 10rem; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__social-icon:nth-child(3) {
+        margin-right: 0; } }
     .contact__social-icon:hover {
       transform: scale(1.1); }
   .contact__link {
@@ -364,13 +397,10 @@ body.loading {
   left: 50%;
   background-color: transparent;
   -webkit-transform-style: preserve-3d;
-  transform: translate(-58%, 46%) rotateX(70deg) rotateY(0deg) rotateZ(35deg);
+  transform: translate(-58%, 44%) rotateX(70deg) rotateY(0deg) rotateZ(35deg);
   width: 259rem; }
   .cards__row {
     width: 100%; }
-  @media only screen and (max-width: 93.75em) {
-    .cards {
-      transform: translate(-58%, 44%) rotateX(70deg) rotateY(0deg) rotateZ(35deg); } }
 
 .card {
   float: left;

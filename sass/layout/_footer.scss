@@ -4,19 +4,31 @@
     background-color: $color-bg--dark;
     display: block;
     position: relative;
+    padding: 2vh;
 
     &__email {
-        position: absolute;
-        bottom: 40%;
-        left: 10rem;
 
         &:link,
         &:visited {
+            position: absolute;
+            bottom: 40%;
+            left: 10rem;
             color: $color-white;
             font-size: 7rem;
             border-bottom: .5rem solid $color-blue--light;
             padding-bottom: .5rem;
             transition: padding-bottom .2s ease;
+
+            @include respond(tab-land) {
+                position: relative;
+                display: block;
+                text-align: center;
+                font-size: 4.5rem;
+                bottom: auto;
+                left: auto;
+                width: 52rem;
+                margin: 6.5rem auto;
+            }    
         }
     }
     
@@ -29,8 +41,15 @@
         letter-spacing: .2rem;
         line-height: 130%;
         text-align: center;
+
+        @include respond(tab-land) {
+            position: relative;
+            display: block;
+            bottom: auto;
+            right: auto;
+        }
     }
-    
+
     &__name {
         letter-spacing: .5rem;
     }

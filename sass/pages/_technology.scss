@@ -1,18 +1,39 @@
+// Hide cards when not active -----------------
+.section > .technology > .technology__list {
+    visibility: hidden;
+}
+
+.section.active > .technology > .technology__list {
+    visibility: visible;
+}
+// --------------------------------------------
+
 .technology {
     &__heading {
         color: $color-offwhite;
     }
-
+    
     &__list {
         display: block;
-        margin: 6rem auto auto auto;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: $container-width;
 
+        @include respond(tab-port) {
+            width: $container-width--tablet;
+        }
+
+        @include respond(phone) {
+            width: $container-width--phone;
+        }
+
         & > * {
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
     }
-    
+
     &__technology {
         color: $color-offwhite;
 
@@ -30,12 +51,6 @@
 
         .white {
             color: $color-white;
-        }
-
-        .offset-up {
-            position: relative;
-            display: inline-block;
-            transform: translate(-.2rem, -.2rem);
         }
 
         &.highlight-row {
