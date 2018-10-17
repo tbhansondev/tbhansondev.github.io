@@ -48,11 +48,11 @@ h2 {
   display: block;
   font-size: 8.5rem;
   letter-spacing: .5rem;
-  margin: 7rem auto;
+  margin: 6.3vh auto;
   text-align: center; }
   @media only screen and (max-width: 93.75em) {
     h2 {
-      margin-bottom: 3rem; } }
+      margin-bottom: 2.7vh; } }
 
 h3 {
   display: block;
@@ -128,20 +128,27 @@ section {
   width: 100%;
   background-color: #1d2225;
   display: block;
-  position: relative; }
-  .footer__email {
+  position: relative;
+  padding: 2vh; }
+  .footer__email:link, .footer__email:visited {
     position: absolute;
     bottom: 40%;
-    left: 10rem; }
-    .footer__email:link, .footer__email:visited {
-      color: #fff;
-      font-size: 7rem;
-      border-bottom: 0.5rem solid #5fb3b3;
-      padding-bottom: .5rem;
-      transition: padding-bottom .2s ease; }
-      @media only screen and (max-width: 56.25em) {
-        .footer__email:link, .footer__email:visited {
-          font-size: 4.5rem; } }
+    left: 10rem;
+    color: #fff;
+    font-size: 7rem;
+    border-bottom: 0.5rem solid #5fb3b3;
+    padding-bottom: .5rem;
+    transition: padding-bottom .2s ease; }
+    @media only screen and (max-width: 75em) {
+      .footer__email:link, .footer__email:visited {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-size: 4.5rem;
+        bottom: auto;
+        left: auto;
+        width: 52rem;
+        margin: 5.85vh auto; } }
   .footer__blurb {
     position: absolute;
     bottom: 40%;
@@ -151,6 +158,12 @@ section {
     letter-spacing: .2rem;
     line-height: 130%;
     text-align: center; }
+    @media only screen and (max-width: 75em) {
+      .footer__blurb {
+        position: relative;
+        display: block;
+        bottom: auto;
+        right: auto; } }
   .footer__name {
     letter-spacing: .5rem; }
   .footer__location {
@@ -198,24 +211,18 @@ section {
   .js--cursor--hide {
     visibility: hidden; }
 
-.section > .about-me > .about-me__text {
-  visibility: hidden; }
-
-.section.active > .about-me > .about-me__text {
-  visibility: visible; }
-
 .about-me {
   height: 100%;
   width: 100%; }
   .about-me__text {
     width: 97rem;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    margin: 4.5vh auto 0 auto; }
     @media only screen and (max-width: 56.25em) {
       .about-me__text {
         width: 75rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .about-me__text {
+        width: 53rem; } }
     .about-me__text .large {
       color: #e66d63;
       font-size: 3rem;
@@ -223,25 +230,19 @@ section {
     .about-me__text .emphasis {
       color: #e66d63; }
 
-.section > .technology > .technology__list {
-  visibility: hidden; }
-
-.section.active > .technology > .technology__list {
-  visibility: visible; }
-
 .technology__heading {
   color: snow; }
 
 .technology__list {
   display: block;
-  position: absolute;
-  top: 57%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 4.5vh auto 0 auto;
   width: 97rem; }
   @media only screen and (max-width: 56.25em) {
     .technology__list {
       width: 75rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .technology__list {
+      width: 53rem; } }
   .technology__list > * {
     font-size: 2.5rem; }
 
@@ -271,24 +272,21 @@ section {
 .technology__technology--spacer > .number-prefix {
   margin-right: 1.5rem; }
 
-.section > .projects > .projects__coming-soon {
-  visibility: hidden; }
-
-.section.active > .projects > .projects__coming-soon {
-  visibility: visible; }
-
 .projects__heading {
   color: snow; }
 
 .projects__coming-soon {
   display: block;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 17vh auto 0 auto;
   background-color: rgba(255, 250, 250, 0.8);
   width: 97rem;
   padding: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .projects__coming-soon {
+      width: 75rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .projects__coming-soon {
+      width: 53rem; } }
 
 .projects__coming-soon-text {
   font-size: 2.5rem; }
@@ -308,7 +306,7 @@ section {
     display: table; }
   .contact__social {
     width: 134rem;
-    margin: 15rem auto 0 auto; }
+    margin: 13.5vh auto 0 auto; }
     .contact__social::after {
       content: "";
       clear: both;
@@ -316,9 +314,16 @@ section {
     @media only screen and (max-width: 93.75em) {
       .contact__social {
         width: 122rem; } }
+    @media only screen and (max-width: 75em) {
+      .contact__social {
+        width: 56rem;
+        margin-top: 8.5vh; } }
     @media only screen and (max-width: 56.25em) {
       .contact__social {
-        width: 56rem; } }
+        margin-top: 13.5vh; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__social {
+        width: 50rem; } }
     .contact__social:hover > * {
       transform: scale(0.9); }
   .contact__social-icon {
@@ -333,9 +338,12 @@ section {
     @media only screen and (max-width: 93.75em) {
       .contact__social-icon {
         width: 12rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__social-icon {
+        width: 10rem; } }
     .contact__social-icon:not(:last-child) {
       margin-right: 10rem; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 75em) {
       .contact__social-icon:nth-child(3) {
         margin-right: 0; } }
     .contact__social-icon:hover {

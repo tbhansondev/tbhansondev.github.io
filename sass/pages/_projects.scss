@@ -1,13 +1,3 @@
-// Hide absolute positioned element when not active -----------------
-.section > .projects > .projects__coming-soon {
-    visibility: hidden;
-}
-
-.section.active > .projects > .projects__coming-soon {
-    visibility: visible;
-}
-// ------------------------------------------------------------------
-
 .projects {
     
     &__heading {
@@ -16,14 +6,11 @@
 
     &__coming-soon {
         display: block;
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 17vh auto 0 auto;
         background-color: rgba($color-offwhite, .8);
         width: $container-width;
         padding: 6rem;
-        
+
         @include respond(tab-port) {
             width: $container-width--tablet;
         }

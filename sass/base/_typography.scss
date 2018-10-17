@@ -13,12 +13,12 @@ h2 {
     display: block;
     font-size: 8.5rem;
     letter-spacing: .5rem;
-    margin: 7rem auto;
+    margin: 6.3vh auto;
     text-align: center;
 
     
     @include respond(win-tab) {
-        margin-bottom: 3rem;
+        margin-bottom: 2.7vh;
     }
     
 }
