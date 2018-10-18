@@ -333,7 +333,7 @@ section {
     @media only screen and (max-width: 37.5em) {
       .contact__social {
         width: 50rem; } }
-    .contact__social:hover > * {
+    .contact__social:hover .contact__social-icon:not(:hover) {
       transform: scale(0.9); }
   .contact__social-icon {
     height: auto;

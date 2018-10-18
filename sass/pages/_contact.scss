@@ -36,11 +36,11 @@
             width: 50rem;
         }
         
-        &:hover > * {
+        &:hover .contact__social-icon:not(:hover) {
             transform: scale(.9);
         }
     }
-    
+
     &__social-icon {
         height: auto;
         width: 14rem;
