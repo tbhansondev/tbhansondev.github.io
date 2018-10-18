@@ -1,4 +1,3 @@
-
 var codeList = (function() {
     var el;
     var elNext;
@@ -69,5 +68,4 @@ var codeList = (function() {
         }
     }
 })();
-
 window.addEventListener('load', codeList.init);

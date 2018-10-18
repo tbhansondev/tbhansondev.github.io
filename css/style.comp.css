@@ -206,7 +206,7 @@ section {
     .header__link:hover {
       border-bottom: 2px solid white; }
     .header__link--twitter {
-      color: #1da1f2; }
+      color: #1DA1F2; }
     .header__link--linkedin {
       color: #007bb5; }
     .header__link--github {
@@ -365,7 +365,7 @@ section {
     height: auto;
     width: 100%; }
     .contact__icon--twitter {
-      fill: #1da1f2; }
+      fill: #1DA1F2; }
     .contact__icon--linkedin {
       fill: #007bb5; }
     .contact__icon--github {

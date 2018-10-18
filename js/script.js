@@ -8,5 +8,4 @@ var fullPageSetup = function() {
         touchSensitivity: 10
     });
 };
-
 window.addEventListener('load', fullPageSetup);
