@@ -15,8 +15,9 @@
         @include respond(phone) {
             width: $container-width--phone;
         }
-
+        
         & > * {
+            line-height: 100%;
             font-size: 2.5rem;
         }
     }

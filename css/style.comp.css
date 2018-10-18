@@ -34,6 +34,13 @@ button {
   cursor: pointer;
   outline: inherit;
   z-index: 10; }
+  button:hover, button:active, button:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Karla", sans-serif;
@@ -121,7 +128,8 @@ section {
 .section-container {
   height: 100%;
   width: 100%;
-  padding: 2vh; }
+  padding: 2vh;
+  position: relative; }
 
 .footer {
   height: 29vh;
@@ -244,6 +252,7 @@ section {
     .technology__list {
       width: 53rem; } }
   .technology__list > * {
+    line-height: 100%;
     font-size: 2.5rem; }
 
 .technology__technology {
@@ -401,12 +410,24 @@ body.loading {
 .cards {
   display: block;
   position: absolute;
-  bottom: 0;
-  left: 50%;
   background-color: transparent;
-  -webkit-transform-style: preserve-3d;
-  transform: translate(-58%, 44%) rotateX(70deg) rotateY(0deg) rotateZ(35deg);
-  width: 259rem; }
+  width: 259rem;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%); }
+  .cards::after {
+    content: "";
+    clear: both;
+    display: table; }
+  @supports (transform-style: preserve-3d) {
+    .cards {
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: translate(-58%, 44%) rotateX(70deg) rotateY(0deg) rotateZ(35deg); } }
   .cards__row {
     width: 100%; }
 
@@ -417,41 +438,53 @@ body.loading {
   width: 35rem;
   margin: 1rem;
   box-shadow: 0;
-  backface-visibility: hidden;
-  transform-origin: -20% 15%; }
+  transition: transform .4s ease, box-shadow .4s ease, z-index .4s ease; }
   .card::after {
     content: "";
     clear: both;
     display: table; }
+  @supports (transform-style: preserve-3d) {
+    .card {
+      backface-visibility: hidden;
+      transform-origin: -20% 15%; } }
   .card__content {
     height: 100%;
     width: 100%;
     overflow: hidden;
     padding: 2rem;
     position: relative; }
-  .card::before, .card::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background-color: #eee; }
-  .card::before {
-    width: 100%;
-    height: .8rem;
-    bottom: 0;
-    left: 0;
-    transform: skewX(35deg) translateX(0) translateY(0.8rem);
-    transform-origin: 0 100%; }
-  .card::after {
-    height: 100%;
-    width: .6rem;
-    top: 0;
-    right: 0;
-    transform: skewY(55deg) translateX(0.6rem) translateY(0);
-    transform-origin: 100% 0; }
-  .card:hover {
-    cursor: default; }
   .card.card--active {
-    transition: transform .4s ease, box-shadow .4s ease; }
+    z-index: 1; }
+    .card.card--active:hover {
+      transform: translateY(-4rem);
+      box-shadow: 0 4rem 2rem rgba(0, 0, 0, 0.4);
+      z-index: 99; }
+    .card.card--active:focus {
+      transform: translateY(-20rem) scale(1.4);
+      box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.4);
+      z-index: 99; }
+  @supports (transform-style: preserve-3d) {
+    .card::before, .card::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: #eee; }
+    .card::before {
+      width: 100%;
+      height: .8rem;
+      bottom: 0;
+      left: 0;
+      transform: skewX(35deg) translateX(0) translateY(0.8rem);
+      transform-origin: 0 100%; }
+    .card::after {
+      height: 100%;
+      width: .6rem;
+      top: 0;
+      right: 0;
+      transform: skewY(55deg) translateX(0.6rem) translateY(0);
+      transform-origin: 100% 0; }
+    .card:hover {
+      cursor: default; }
     .card.card--active::before, .card.card--active::after {
       transition: transform .4s ease, height .4s ease, width .4s ease; }
     .card.card--active:hover {
@@ -470,7 +503,7 @@ body.loading {
         height: 0px; }
       .card.card--active:focus::after {
         transform: skewY(0deg) translateX(0px) translateY(0px);
-        width: 0px; }
+        width: 0px; } }
 
 .card > * {
   text-align: left;
@@ -489,10 +522,13 @@ body.loading {
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(20deg, transparent 30%, rgba(113, 122, 149, 0.2) 30%, rgba(113, 122, 149, 0.2) 70%, transparent 70%);
     background-size: 500%;
     background-position: 17%;
+    background-image: linear-gradient(20deg, transparent 40%, rgba(113, 122, 149, 0.2) 40%, rgba(113, 122, 149, 0.2) 60%, transparent 60%);
     z-index: 99; }
+    @supports (transform-style: preserve-3d) {
+      .card--school .card__content::after {
+        background-image: linear-gradient(20deg, transparent 30%, rgba(113, 122, 149, 0.2) 30%, rgba(113, 122, 149, 0.2) 70%, transparent 70%); } }
   .card--school > * {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
   .card--school__header {
@@ -665,10 +701,13 @@ body.loading {
       left: 0;
       height: 100%;
       width: 100%;
-      background-image: linear-gradient(20deg, transparent 30%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.2) 70%, transparent 70%);
       background-size: 500%;
       background-position: 17%;
+      background-image: linear-gradient(20deg, transparent 40%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.2) 60%, transparent 60%);
       z-index: 99; }
+      @supports (transform-style: preserve-3d) {
+        .card--university .card__content::after {
+          background-image: linear-gradient(20deg, transparent 30%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.2) 70%, transparent 70%); } }
   .card--university__bg {
     position: absolute;
     top: 2.4rem;
@@ -724,10 +763,13 @@ body.loading {
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(20deg, transparent 30%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.2) 70%, transparent 70%);
     background-size: 500%;
     background-position: 17%;
+    background-image: linear-gradient(20deg, transparent 40%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.2) 60%, transparent 60%);
     z-index: 99; }
+    @supports (transform-style: preserve-3d) {
+      .card--music .card__content::after {
+        background-image: linear-gradient(20deg, transparent 30%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.2) 70%, transparent 70%); } }
   .card--music__bg {
     position: absolute;
     width: 170%;
