@@ -68,9 +68,21 @@
         }
 
         &:focus {
-            transform: translateY(-20rem) scale(1.4);
+            
             box-shadow: 0 4rem 4rem rgba(0, 0, 0, .4);
             z-index: 99;
+        }
+
+        &.card--left:focus {
+            transform: translate(37rem, -20rem) scale(1.4);
+        }
+
+        &.card--middle:focus {
+            transform: translateY(-20rem) scale(1.4);
+        }
+
+        &.card--right:focus {
+            transform: translate(-37rem, -20rem) scale(1.4);
         }
     }
 
@@ -106,7 +118,10 @@
             cursor: default;
         }
 
-        &.card--active {        
+        &.card--active,
+        &.card--active.card--left,
+        &.card--active.card--middle,
+        &.card--active.card--right {        
 
             &::before,
             &::after {

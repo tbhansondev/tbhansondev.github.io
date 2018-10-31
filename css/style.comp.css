@@ -460,9 +460,14 @@ body.loading {
       box-shadow: 0 4rem 2rem rgba(0, 0, 0, 0.4);
       z-index: 99; }
     .card.card--active:focus {
-      transform: translateY(-20rem) scale(1.4);
       box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.4);
       z-index: 99; }
+    .card.card--active.card--left:focus {
+      transform: translate(37rem, -20rem) scale(1.4); }
+    .card.card--active.card--middle:focus {
+      transform: translateY(-20rem) scale(1.4); }
+    .card.card--active.card--right:focus {
+      transform: translate(-37rem, -20rem) scale(1.4); }
   @supports (transform-style: preserve-3d) {
     .card::before, .card::after {
       content: "";
@@ -485,23 +490,23 @@ body.loading {
       transform-origin: 100% 0; }
     .card:hover {
       cursor: default; }
-    .card.card--active::before, .card.card--active::after {
+    .card.card--active::before, .card.card--active::after, .card.card--active.card--left::before, .card.card--active.card--left::after, .card.card--active.card--middle::before, .card.card--active.card--middle::after, .card.card--active.card--right::before, .card.card--active.card--right::after {
       transition: transform .4s ease, height .4s ease, width .4s ease; }
-    .card.card--active:hover {
+    .card.card--active:hover, .card.card--active.card--left:hover, .card.card--active.card--middle:hover, .card.card--active.card--right:hover {
       cursor: pointer;
       transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) translateZ(4rem);
       box-shadow: 4rem 4rem 2rem rgba(0, 0, 0, 0.4); }
-      .card.card--active:hover::before {
+      .card.card--active:hover::before, .card.card--active.card--left:hover::before, .card.card--active.card--middle:hover::before, .card.card--active.card--right:hover::before {
         transform: skewX(40deg) translateX(0) translateY(0.8rem); }
-      .card.card--active:hover::after {
+      .card.card--active:hover::after, .card.card--active.card--left:hover::after, .card.card--active.card--middle:hover::after, .card.card--active.card--right:hover::after {
         transform: skewY(50deg) translateX(0.6rem) translateY(0); }
-    .card.card--active:focus {
+    .card.card--active:focus, .card.card--active.card--left:focus, .card.card--active.card--middle:focus, .card.card--active.card--right:focus {
       transform: rotateX(-60deg) rotateY(40deg) rotateZ(-17deg) translateX(-21rem) translateY(-25rem) translateZ(50rem) scale(1.4);
       box-shadow: 0px 4rem 4rem rgba(0, 0, 0, 0.4); }
-      .card.card--active:focus::before {
+      .card.card--active:focus::before, .card.card--active.card--left:focus::before, .card.card--active.card--middle:focus::before, .card.card--active.card--right:focus::before {
         transform: skewX(0deg) translateX(0px) translateY(0px);
         height: 0px; }
-      .card.card--active:focus::after {
+      .card.card--active:focus::after, .card.card--active.card--left:focus::after, .card.card--active.card--middle:focus::after, .card.card--active.card--right:focus::after {
         transform: skewY(0deg) translateX(0px) translateY(0px);
         width: 0px; } }
 
