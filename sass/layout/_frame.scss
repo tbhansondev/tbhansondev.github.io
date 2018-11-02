@@ -33,5 +33,9 @@
             left: 0;
         }
     }
+
+    @include respond(tab-port) {
+        visibility: hidden;
+    }
 }
 

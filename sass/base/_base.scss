@@ -14,19 +14,19 @@ html {
   color: $color-grey--dark;
   
   @include respond(win-tab) {
-    font-size: 56.25%;          // 9px    
+    font-size: 56.25%;            // 9px    
   }
 
   @include respond(tab-port) {
-    font-size: 50%;             // 8px
+    font-size: 50%;               // 8px
   }   
 
   @include respond(phone) {
-    //font-size: 43.75%;             // 7px
+    font-size: 37.5%;            // 6px
   }    
   
   @include respond(big-desk) {
-    font-size: 75%;             // 12px
+    font-size: 75%;               // 12px
   }
   
 };

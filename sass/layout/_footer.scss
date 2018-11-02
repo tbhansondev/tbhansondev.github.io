@@ -6,6 +6,10 @@
     position: relative;
     padding: 2vh;
 
+    @include respond(tab-port) {
+        height: 31vh;
+    }
+    
     &__email {
 
         &:link,

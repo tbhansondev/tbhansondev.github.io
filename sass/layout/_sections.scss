@@ -9,4 +9,14 @@ section {
     width: 100%;
     padding: 2vh;
     position: relative;
+
+    @include respond(tab-port) {
+        padding: 2vh 0;
+    }
+}
+
+#fp-nav {
+    @include respond(tab-port) {
+        visibility: hidden;
+    }
 }

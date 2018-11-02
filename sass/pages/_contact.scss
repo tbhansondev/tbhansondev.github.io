@@ -33,6 +33,7 @@
         }
 
         @include respond(phone) {
+            margin-top: 6.5vh;
             width: 50rem;
         }
         
@@ -40,7 +41,7 @@
             transform: scale(.9);
         }
     }
-
+    
     &__social-icon {
         height: auto;
         width: 14rem;
