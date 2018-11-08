@@ -16,8 +16,12 @@
     @include clearfix;
     top: 65%;
     left: 50%;
-    transform: translateX(-50%);    
+    transform: translateX(-50%);  
     
+    @include respond(tab-land) {
+        top: 70%;
+    }
+
     @supports not (-moz-appearance: none) {
         @supports (transform-style: preserve-3d) {
             @media only screen and (min-width: 56.25em) {           //900px
