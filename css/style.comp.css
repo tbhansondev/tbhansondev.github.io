@@ -506,6 +506,16 @@ body.loading {
       transform: translateY(-20rem) scale(1.4); }
     .card.card--active.card--right:focus {
       transform: translate(-37rem, -20rem) scale(1.4); }
+    @media only screen and (max-width: 75em) {
+      .card.card--active:hover {
+        box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.4);
+        z-index: 99; }
+      .card.card--active.card--left:hover {
+        transform: translate(37rem, -20rem) scale(1.4); }
+      .card.card--active.card--middle:hover {
+        transform: translateY(-20rem) scale(1.4); }
+      .card.card--active.card--right:hover {
+        transform: translate(-37rem, -20rem) scale(1.4); } }
   @supports not (-moz-appearance: none) {
     @supports (transform-style: preserve-3d) {
       @media only screen and (min-width: 56.25em) {

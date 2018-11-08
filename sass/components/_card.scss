@@ -17,7 +17,7 @@
     top: 65%;
     left: 50%;
     transform: translateX(-50%);    
-
+    
     @supports not (-moz-appearance: none) {
         @supports (transform-style: preserve-3d) {
             @media only screen and (min-width: 56.25em) {           //900px
@@ -92,8 +92,28 @@
         &.card--right:focus {
             transform: translate(-37rem, -20rem) scale(1.4);
         }
-    }
 
+        @include respond(tab-land) {
+            &:hover {
+            
+                box-shadow: 0 4rem 4rem rgba(0, 0, 0, .4);
+                z-index: 99;
+            }
+    
+            &.card--left:hover {
+                transform: translate(37rem, -20rem) scale(1.4);
+            }
+    
+            &.card--middle:hover {
+                transform: translateY(-20rem) scale(1.4);
+            }
+    
+            &.card--right:hover {
+                transform: translate(-37rem, -20rem) scale(1.4);
+            }
+        }
+    }
+    
     @supports not (-moz-appearance: none) {
         @supports (transform-style: preserve-3d) {
 
