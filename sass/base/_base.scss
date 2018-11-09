@@ -17,10 +17,10 @@ html {
     font-size: 56.25%;            // 9px    
   }
 
-  @include respond(tab-port--less) {
+  @include respond(tab-land) {
     font-size: 50%;               // 8px
   }   
-
+  
   @include respond(phone) {
     font-size: 37.5%;            // 6px
   }    
