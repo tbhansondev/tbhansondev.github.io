@@ -1,8 +1,14 @@
-section {
+.section {
     height: 100vh;
     width: 100%;
     overflow: hidden;
 };
+
+#body.fp-responsive #fullpage .section,
+#body.fp-responsive #fullpage .fp-slide,
+#body.fp-responsive #fullpage .fp-tableCell {
+    height: 750px !important;
+}
 
 .section-container {
     height: 100%;
@@ -10,13 +16,13 @@ section {
     padding: 2vh;
     position: relative;
 
-    @include respond(tab-port) {
+    @include respond(tab-port--less) {
         padding: 2vh 0;
     }
 }
 
 #fp-nav {
-    @include respond(tab-port) {
+    @include respond(tab-port--less) {
         visibility: hidden;
     }
 }

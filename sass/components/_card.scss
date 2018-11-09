@@ -24,7 +24,7 @@
 
     @supports not (-moz-appearance: none) {
         @supports (transform-style: preserve-3d) {
-            @media only screen and (min-width: 56.25em) {           //900px
+            @include respond(tab-port--greater) {
                 top: auto;
                 bottom: 0;
                 left: 50%;
@@ -55,7 +55,7 @@
 
     @supports not (-moz-appearance: none) {
         @supports (transform-style: preserve-3d) {
-            @media only screen and (min-width: 56.25em) {           //900px
+            @include respond(tab-port--greater) {
                 backface-visibility: hidden;
                 transform-origin: -20% 15%;
             }
@@ -121,7 +121,7 @@
     @supports not (-moz-appearance: none) {
         @supports (transform-style: preserve-3d) {
 
-            @media only screen and (min-width: 56.25em) {           //900px
+            @include respond(tab-port--greater) {
 
                 &::before,
                 &::after {
@@ -198,6 +198,10 @@
             }
         }
     }
+}
+
+#body.fp-responsive #fullpage .cards {
+    top: 550px !important;
 }
 
 .card {

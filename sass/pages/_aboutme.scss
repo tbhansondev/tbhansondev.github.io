@@ -10,7 +10,7 @@
         width: $container-width;
         margin: 4.5vh auto 0 auto;
 
-        @include respond(tab-port) {
+        @include respond(tab-port--less) {
             margin: 7.5vh auto 0 auto;
             width: $container-width--tablet;
         }

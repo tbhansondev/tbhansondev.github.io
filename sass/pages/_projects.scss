@@ -11,7 +11,7 @@
         width: $container-width;
         padding: 6rem;
 
-        @include respond(tab-port) {
+        @include respond(tab-port--less) {
             width: $container-width--tablet;
         }
 

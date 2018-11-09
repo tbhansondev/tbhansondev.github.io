@@ -19,9 +19,15 @@ html {
   @media only screen and (max-width: 37.5em) {
     html {
       font-size: 37.5%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 31.25%; } }
   @media only screen and (min-width: 125em) {
     html {
       font-size: 75%; } }
+  @media only screen and (min-width: 218.75em) {
+    html {
+      font-size: 125%; } }
 
 button {
   display: block;
@@ -127,10 +133,15 @@ li {
   .frame {
     visibility: hidden; } }
 
-section {
+.section {
   height: 100vh;
   width: 100%;
   overflow: hidden; }
+
+#body.fp-responsive #fullpage .section,
+#body.fp-responsive #fullpage .fp-slide,
+#body.fp-responsive #fullpage .fp-tableCell {
+  height: 750px !important; }
 
 .section-container {
   height: 100%;
@@ -196,11 +207,17 @@ section {
   .footer__year {
     color: #5fb3b3; }
 
+#body.fp-responsive #fullpage .footer {
+  height: 200px !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  padding: 20px !important; }
+
 .header {
   background-color: #1d2225; }
   .header__heading {
     display: block;
-    margin-top: 37vh;
+    margin-top: 40rem;
     margin-bottom: 2vh;
     text-align: center; }
   .header__social {
@@ -562,6 +579,9 @@ body.loading {
           .card.card--active:focus::after, .card.card--active.card--left:focus::after, .card.card--active.card--middle:focus::after, .card.card--active.card--right:focus::after {
             transform: skewY(0deg) translateX(0px) translateY(0px);
             width: 0px; } } } }
+
+#body.fp-responsive #fullpage .cards {
+  top: 550px !important; }
 
 .card > * {
   text-align: left;

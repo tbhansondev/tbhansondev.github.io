@@ -5,7 +5,9 @@ var fullPageSetup = function() {
         anchors: ['home', 'aboutme', 'tech', 'projects', 'contact'],
         sectionsColor: ['#1d2225', 'snow', '#1d2225', '#e66d63', 'snow'],
         loopHorizontal: false,
-        touchSensitivity: 10
+        touchSensitivity: 10,
+        responsiveWidth: 750,
+        responsiveHeight: 750
     });
 };
 window.addEventListener('load', fullPageSetup);
