@@ -511,6 +511,8 @@ body.loading {
     overflow: hidden;
     padding: 2rem;
     position: relative; }
+    .card__content--responsive {
+      display: none; }
   .card.card--active {
     z-index: 1; }
     .card.card--active:hover {
@@ -968,3 +970,18 @@ body.loading {
 
 .card:focus .card__content::after {
   background-position: -30%; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .card--university > .card__content {
+    border: 0;
+    padding: 0; }
+  .card__content--standard {
+    display: none; }
+  .card__content--responsive {
+    display: block;
+    margin: 0;
+    border: 0;
+    padding: 0; }
+    .card__content--responsive .responsive-image {
+      width: 100%;
+      height: auto; } }

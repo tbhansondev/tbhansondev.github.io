@@ -68,6 +68,10 @@
         overflow: hidden;
         padding: 2rem;
         position: relative;
+
+        &--responsive {
+            display: none;
+        }
     }
 
     &.card--active {
@@ -663,5 +667,32 @@
 
     &:focus &__content::after {
         background-position: -30%;
+    }
+}
+
+// Responsive design for IE for not handling svg's correctly
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .card {  
+
+        &--university > &__content {
+            border: 0;
+            padding: 0;
+        }
+
+        &__content--standard {
+            display: none;
+        }
+
+        &__content--responsive {
+            display: block;
+            margin: 0;
+            border: 0;
+            padding: 0;
+
+            .responsive-image {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }

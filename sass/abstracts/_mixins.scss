@@ -53,6 +53,7 @@
 
 
 @mixin shine($clr) {
+    
     &::after {
         content: "";
         position: absolute;
@@ -69,4 +70,5 @@
             background-image: linear-gradient(20deg, transparent 30%, rgba($clr, .2) 30%, rgba($clr, .2) 70%,transparent 70%);
         }
     }
+    
 }
