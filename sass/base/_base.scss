@@ -12,10 +12,14 @@ html {
   font-size: 62.5%;               // 10px
   font-family: $font-body;
   color: $color-grey--dark;
+
+  @include respond(letterbox) {
+    font-size: 43.75%;               // 7px
+  }
   
   @include respond(win-tab) {
     font-size: 56.25%;            // 9px    
-  }
+  }  
 
   @include respond(tab-land) {
     font-size: 50%;               // 8px

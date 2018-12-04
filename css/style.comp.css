@@ -10,6 +10,9 @@ html {
   font-size: 62.5%;
   font-family: "Ubuntu Mono", monospace;
   color: #2c3338; }
+  @media only screen and (max-height: 56.25em) {
+    html {
+      font-size: 43.75%; } }
   @media only screen and (max-width: 93.75em) {
     html {
       font-size: 56.25%; } }
