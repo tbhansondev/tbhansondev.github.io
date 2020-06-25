@@ -1,11 +1,12 @@
 .technology {
     &__heading {
         color: $color-offwhite;
+        margin-bottom: 3rem;
     }
     
     &__list {
         display: block;
-        margin: 4.5vh auto 0 auto;
+        margin: 0 auto;
         width: $container-width;
 
         @include respond(tab-port--less) {
