@@ -497,8 +497,8 @@ body.loading {
           left: 50%;
           -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-          -webkit-transform: translate(-58%, 44%) rotateX(70deg) rotateY(0deg) rotateZ(35deg);
-                  transform: translate(-58%, 44%) rotateX(70deg) rotateY(0deg) rotateZ(35deg); } } } }
+          -webkit-transform: translate(-58%, 50%) rotateX(72deg) rotateY(0deg) rotateZ(35deg);
+                  transform: translate(-58%, 50%) rotateX(72deg) rotateY(0deg) rotateZ(35deg); } } } }
   .cards__row {
     width: 100%; }
 
@@ -510,10 +510,20 @@ body.loading {
   margin: 1rem;
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  -webkit-transition: z-index .4s ease, -webkit-transform .4s ease, -webkit-box-shadow .4s ease;
-  transition: z-index .4s ease, -webkit-transform .4s ease, -webkit-box-shadow .4s ease;
-  transition: transform .4s ease, box-shadow .4s ease, z-index .4s ease;
-  transition: transform .4s ease, box-shadow .4s ease, z-index .4s ease, -webkit-transform .4s ease, -webkit-box-shadow .4s ease; }
+  -webkit-transition: z-index .4s ease,
+ -webkit-transform .4s ease,
+ -webkit-box-shadow .4s ease;
+  transition: z-index .4s ease,
+ -webkit-transform .4s ease,
+ -webkit-box-shadow .4s ease;
+  transition: transform .4s ease,
+ box-shadow .4s ease,
+ z-index .4s ease;
+  transition: transform .4s ease,
+ box-shadow .4s ease,
+ z-index .4s ease,
+ -webkit-transform .4s ease,
+ -webkit-box-shadow .4s ease; }
   .card::after {
     content: "";
     clear: both;
@@ -598,10 +608,19 @@ body.loading {
         .card:hover {
           cursor: default; }
         .card.card--active::before, .card.card--active::after, .card.card--active.card--left::before, .card.card--active.card--left::after, .card.card--active.card--middle::before, .card.card--active.card--middle::after, .card.card--active.card--right::before, .card.card--active.card--right::after {
-          -webkit-transition: height .4s ease, width .4s ease, -webkit-transform .4s ease;
-          transition: height .4s ease, width .4s ease, -webkit-transform .4s ease;
-          transition: transform .4s ease, height .4s ease, width .4s ease;
-          transition: transform .4s ease, height .4s ease, width .4s ease, -webkit-transform .4s ease; }
+          -webkit-transition: height .4s ease,
+ width .4s ease,
+ -webkit-transform .4s ease;
+          transition: height .4s ease,
+ width .4s ease,
+ -webkit-transform .4s ease;
+          transition: transform .4s ease,
+ height .4s ease,
+ width .4s ease;
+          transition: transform .4s ease,
+ height .4s ease,
+ width .4s ease,
+ -webkit-transform .4s ease; }
         .card.card--active:hover, .card.card--active.card--left:hover, .card.card--active.card--middle:hover, .card.card--active.card--right:hover {
           cursor: pointer;
           -webkit-transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) translateZ(4rem);
