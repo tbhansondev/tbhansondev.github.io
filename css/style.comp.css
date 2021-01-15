@@ -273,9 +273,11 @@ li {
 .about-me {
   height: 100%;
   width: 100%; }
+  .about-me__heading {
+    margin-bottom: 3rem; }
   .about-me__text {
     width: 97rem;
-    margin: 4.5vh auto 0 auto; }
+    margin: 3.2vh auto 0 auto; }
     @media only screen and (max-width: 56.25em) {
       .about-me__text {
         margin: 7.5vh auto 0 auto;
@@ -291,11 +293,12 @@ li {
       color: #e66d63; }
 
 .technology__heading {
-  color: snow; }
+  color: snow;
+  margin-bottom: 3rem; }
 
 .technology__list {
   display: block;
-  margin: 4.5vh auto 0 auto;
+  margin: 0 auto;
   width: 97rem; }
   @media only screen and (max-width: 56.25em) {
     .technology__list {
@@ -337,21 +340,30 @@ li {
 .projects__heading {
   color: snow; }
 
-.projects__coming-soon {
+.projects__subheading {
   display: block;
-  margin: 17vh auto 0 auto;
+  margin: 0 auto;
   background-color: rgba(255, 250, 250, 0.8);
   width: 97rem;
   padding: 6rem; }
   @media only screen and (max-width: 56.25em) {
-    .projects__coming-soon {
+    .projects__subheading {
       width: 75rem; } }
   @media only screen and (max-width: 37.5em) {
-    .projects__coming-soon {
+    .projects__subheading {
       width: 53rem; } }
 
-.projects__coming-soon-text {
-  font-size: 2.5rem; }
+.projects__stackblitz-frame {
+  width: 97rem;
+  height: 50vh;
+  margin: 3rem auto;
+  display: block; }
+  @media only screen and (max-width: 56.25em) {
+    .projects__stackblitz-frame {
+      width: 75rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .projects__stackblitz-frame {
+      width: 53rem; } }
 
 .section--contact > .section-container {
   padding: 0; }
@@ -497,9 +509,7 @@ body.loading {
   width: 35rem;
   margin: 1rem;
   box-shadow: 0;
-  transition: transform .4s ease,
- box-shadow .4s ease,
- z-index .4s ease; }
+  transition: transform .4s ease, box-shadow .4s ease, z-index .4s ease; }
   .card::after {
     content: "";
     clear: both;
@@ -568,9 +578,7 @@ body.loading {
         .card:hover {
           cursor: default; }
         .card.card--active::before, .card.card--active::after, .card.card--active.card--left::before, .card.card--active.card--left::after, .card.card--active.card--middle::before, .card.card--active.card--middle::after, .card.card--active.card--right::before, .card.card--active.card--right::after {
-          transition: transform .4s ease,
- height .4s ease,
- width .4s ease; }
+          transition: transform .4s ease, height .4s ease, width .4s ease; }
         .card.card--active:hover, .card.card--active.card--left:hover, .card.card--active.card--middle:hover, .card.card--active.card--right:hover {
           cursor: pointer;
           transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) translateZ(4rem);

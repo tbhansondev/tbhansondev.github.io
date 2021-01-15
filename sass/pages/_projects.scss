@@ -4,9 +4,9 @@
         color: $color-offwhite;
     }
 
-    &__coming-soon {
+    &__subheading {
         display: block;
-        margin: 17vh auto 0 auto;
+        margin: 0 auto;
         background-color: rgba($color-offwhite, .8);
         width: $container-width;
         padding: 6rem;
@@ -20,11 +20,18 @@
         }
     }
 
-    &__coming-soon-heading {
+    &__stackblitz-frame {
+        width: $container-width;
+        height: 50vh;
+        margin: 3rem auto;
+        display: block;
+        
+        @include respond(tab-port--less) {
+            width: $container-width--tablet;
+        }
 
-    }
-
-    &__coming-soon-text {
-        font-size: 2.5rem;
+        @include respond(phone) {
+            width: $container-width--phone;
+        }
     }
 }
